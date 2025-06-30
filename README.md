@@ -48,9 +48,10 @@ ANTLR4 (incluído nas dependências)
 1. Clone o Repositório
 bashgit clone https://github.com/LaisOli22/rpg-compilador.git  
 cd rpg-compilador
-2. Instale as Dependências
 
-3. Gere os Arquivos ANTLR
+2. Compile os arquivos Java
+
+3. Execute o arquivo Main.java
 
 
 ## Usando tasks do VSCode
