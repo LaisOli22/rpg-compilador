@@ -1,0 +1,72 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Gerar ANTLR",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "-jar",
+        "lib/antlr-4.13.2-complete.jar",
+        "-visitor",
+        "-no-listener",
+        "-package",
+        "antlr",
+        "src/antlr/Expr.g4",
+        "-o",
+        "src/antlr"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Compilar projeto",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "javac -cp \"lib\\antlr-runtime-4.13.2.jar;lib\\gson-2.6.2.jar\" -d bin src\\antlr\\*.java"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Executar Main",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "java -cp \"bin;lib\\antlr-runtime-4.13.2.jar;lib\\gson-2.6.2.jar\" antlr.Main"
+      ],
+      "group": "test",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

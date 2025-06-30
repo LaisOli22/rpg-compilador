@@ -11,7 +11,7 @@ fichas_rpg.json
 .settings/
 
 ## VS Code
-.vscode/
 !.vscode/tasks.json
 !.vscode/launch.json
+
 
