@@ -1,0 +1,17 @@
+
+# Arquivos de saída do compilador
+fichas_rpg.json
+*.json
+
+
+## Eclipse
+.project
+.classpath
+.metadata
+.settings/
+
+## VS Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+
