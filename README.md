@@ -12,12 +12,26 @@ Bernardo Braga
 O mundo dos RPGs é rico em criatividade e storytelling, mas frequentemente sofre com a complexidade de gerenciar fichas de personagens. Jogadores e mestres precisam constantemente criar, editar e acompanhar a evolução de personagens com diversos atributos, inventários e características.
 Este projeto nasceu da necessidade de simplificar e automatizar o processo de criação e gerenciamento de fichas de RPG através de uma linguagem intuitiva e natural, permitindo que jogadores foquem no que realmente importa: a aventura!
 
-# Descrição da Linguagem
+## O que você pode fazer?
 
-Regras Léxicas  
-RACA: 'ANAO' | 'ELFO' | 'HUMANO';  
-ATRIBUTOS: 'FORCA' | 'DESTREZA' | 'INTELIGENCIA' | 'CARISMA';  
-CLASSE: 'GUERREIRO' | 'MAGO' | 'LADINO' | 'BARDO';  
+### 🎭 Criar Fichas de Personagem
+Crie fichas completas com todas as informações do seu personagem:
+- **Informações básicas**: nome, idade, classe, raça, nível e pontos de vida
+- **Atributos**: força, destreza, inteligência e carisma
+- **Inventário**: itens com quantidades
+
+### ✏️ Editar Fichas Existentes
+Modifique qualquer aspecto de uma ficha já criada, desde atributos até inventário.
+
+### 📈 Level Up
+Faça seus personagens evoluírem com o comando de level up, opcionalmente especificando o novo nível.
+
+## Classes e Raças Disponíveis
+
+**Classes:** Guerreiro, Mago, Ladino, Bardo  
+**Raças:** Anão, Elfo, Humano 
+
+## Como usar?
 
 ## Estrutura Básica:
 
@@ -38,6 +52,73 @@ CLASSE: 'GUERREIRO' | 'MAGO' | 'LADINO' | 'BARDO';
             ...
         FIM_INVENTARIO
     FIM_FICHA
+
+## Exemplos de Programas
+
+### Criando uma ficha
+### //Altere a ficha pela classe Main.java  
+```
+CRIAR_FICHA Lou
+    IDADE 201
+    CLASSE MAGO
+    RACA HUMANO
+    NIVEL 10
+    VIDA 85
+    
+    ATRIBUTOS
+        FORCA 12
+        DESTREZA 14
+        INTELIGENCIA 20
+        CARISMA 18
+    FIM_ATRIBUTOS
+    
+    INVENTARIO
+        1 - cajado
+        5 - pocao
+    FIM_INVENTARIO
+FIM_FICHA
+``` 
+
+### Exemplo 2: Mago Élfico com Level Up 
+```
+CRIAR_FICHA Legolas
+    IDADE 7
+    CLASSE MAGO
+    RACA ELFO
+    NIVEL 10
+    VIDA 85
+    
+    ATRIBUTOS
+        FORCA 12
+        DESTREZA 7
+        INTELIGENCIA 2
+        CARISMA 8
+    FIM_ATRIBUTOS
+FIM_FICHA
+```  
+
+### Evoluindo o personagem  
+```
+LEVEL_UP Legolas 8 
+```
+ou simplesmente:
+  ```
+  LVL_UP Legolas
+  ```
+
+### Exemplo 3: Edição de Ficha Existente
+```
+EDITAR_FICHA Legolas
+    VIDA 90
+    INVENTARIO
+        1 - Cajado  
+        5 - Pergaminhos 
+        3 - pocao
+        1 - anel_poder
+    FIM_INVENTARIO
+FIM_EDICAO
+```
+
 
 # Como Executar o Compilador
 Pré-requisitos
@@ -79,79 +160,6 @@ executar Main
 
 # Resultado
 O compilador gerará um arquivo fichas_rpg.json contendo todas as fichas processadas.  
-## Exemplos de Programas
-### //Altere a ficha pela classe Main.java  
-### Exemplo 1: Ficha Básica de Guerreiro  
-CRIAR_FICHA Thor  
-IDADE 150  
-CLASSE GUERREIRO    
-RACA ANAO  
-NIVEL 8  
-VIDA 120  
-
-ATRIBUTOS  
-FORCA 18  
-DESTREZA 12   
-INTELIGENCIA 10  
-CARISMA 8  
-FIM_ATRIBUTOS  
-
-INVENTARIO
-1 - Escudo  
-FIM_INVENTARIO  
-FIM_FICHA  
-
-### Exemplo 2: Mago Élfico com Level Up  
-CRIAR_FICHA Legolas  
-IDADE 75  
-CLASSE MAGO  
-RACA ELFO  
-NIVEL 1  
-VIDA 80  
-
-ATRIBUTOS  
-FORCA 8  
-DESTREZA 16  
-INTELIGENCIA 20  
-CARISMA 14  
-FIM_ATRIBUTOS  
-
-INVENTARIO  
-1 - Cajado  
-5 - Pergaminhos  
-FIM_INVENTARIO  
-FIM_FICHA
-
-// Evoluindo o personagem  
-LEVEL_UP Legolas 4 
-
-### Exemplo 3: Edição de Ficha Existente
-CRIAR_FICHA Lou
-IDADE 87
-CLASSE BARDO
-RACA HUMANO
-NIVEL 5
-VIDA 85
-ATRIBUTOS
-FORCA 18
-DESTREZA 14
-INTELIGENCIA 16
-CARISMA 15
-FIM_ATRIBUTOS
-FIM_FICHA 
-
-// Editando a ficha posteriormente
-EDITAR_FICHA Lou 
-NIVEL 7  
-VIDA 100  
-
-INVENTARIO  
-3 - Pocoes_de_Cura   
-FIM_INVENTARIO  
-FIM_EDICAO   
-
-
-
 
 ## Saída do Compilador  
 O compilador gera um arquivo JSON estruturado:    
