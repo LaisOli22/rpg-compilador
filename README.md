@@ -99,7 +99,7 @@ FIM_FICHA
 
 ### Evoluindo o personagem  
 ```
-LEVEL_UP Legolas 8 
+LEVEL_UP 8 Legolas 
 ```
 ou simplesmente:
   ```
