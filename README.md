@@ -31,7 +31,7 @@ Faça seus personagens evoluírem com o comando de level up, opcionalmente espec
 **Classes:** Guerreiro, Mago, Ladino, Bardo  
 **Raças:** Anão, Elfo, Humano 
 
-## Como usar?
+# Como usar?
 
 ## Estrutura Básica:
 
@@ -134,6 +134,24 @@ cd rpg-compilador
 
 3. Execute o arquivo Main.java
 
+
+## Usando o Codespaces
+
+## 1. Gerar os arquivos do ANTLR
+No terminal do Codespaces, execute:  
+```
+bash -c "java -jar lib/antlr-4.13.2-complete.jar -visitor -no-listener src/antlr/Expr.g4"
+```
+## 2. Compilar arquivos java
+No terminal do Codespaces, execute: 
+``` 
+javac -cp "lib/antlr-runtime-4.13.2.jar:lib/gson-2.6.2.jar" -d bin src/antlr/*.java
+```
+## 3. Executar arquivo Main
+Executar programa principal: 
+``` 
+java -cp "bin:lib/antlr-runtime-4.13.2.jar:lib/gson-2.6.2.jar" antlr.Main
+```
 
 ## Usando tasks do VSCode
 
