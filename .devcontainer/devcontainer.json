@@ -1,0 +1,33 @@
+{
+    "name": "RPG Compilador ANTLR",
+    "image": "mcr.microsoft.com/devcontainers/java:17",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17",
+            "installMaven": "true",
+            "installGradle": "false"
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "mike-lischke.vscode-antlr4",
+                "streetsidesoftware.code-spell-checker",
+                "ms-vscode.vscode-json"
+            ],
+            "settings": {
+                "java.configuration.updateBuildConfiguration": "automatic",
+                "java.compile.nullAnalysis.mode": "automatic"
+            }
+        }
+    },
+
+    "postCreateCommand": "echo 'Configurando ambiente RPG Compilador...' && ls -la lib/ || echo 'Certifique-se de que a pasta lib/ existe com os JARs necessários'",
+
+    "forwardPorts": [],
+
+    "remoteUser": "vscode"
+}
