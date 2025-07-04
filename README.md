@@ -178,7 +178,7 @@ Compilar arquivos java
 executar Main  
 *É necessário passar o arquivo .txt contendo os comandos como parâmetro de execução, substitua o "fichaExemplo.txt" pelo seu arquivo criado*
 
-    java -cp "bin;lib\antlr-runtime-4.13.2.jar;lib\gson-2.6.2.jar" antlr.Main  
+    java -cp "bin;lib\antlr-runtime-4.13.2.jar;lib\gson-2.6.2.jar" antlr.Main fichaExemplo.txt
 
 # Resultado
 O compilador gerará um arquivo fichas_rpg.json contendo todas as fichas processadas.  
