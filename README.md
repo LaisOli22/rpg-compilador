@@ -136,7 +136,7 @@ cd rpg-compilador
 3. Execute o arquivo Main.java
 
 
-## Usando o Codespaces
+# Usando o Codespaces
 
 ## 1. Gerar os arquivos do ANTLR
 No terminal do Codespaces, execute:  
@@ -156,7 +156,7 @@ Executar programa principal:
 java -cp "bin:lib/antlr-runtime-4.13.2.jar:lib/gson-2.6.2.jar" antlr.Main fichaExemplo.txt
 ```
 
-## Usando tasks do VSCode
+# Usando tasks do VSCode
 
 Pressione Ctrl+Shift+P (ou Cmd+Shift+P no Mac)  
 Digite Tasks: Run Task    
@@ -166,7 +166,7 @@ Escolha uma das tarefas disponíveis:
 "Compilar projeto" - para compilar o projeto  
 "Executar Main" - para executar o programa principal  
 
-## Ou manualmente
+# Ou manualmente
 Compilar gramática  
 
     java -jar lib/antlr-4.13.2-complete.jar -visitor -no-listener -package antlr src/antlr/Expr.g4 -o src/antlr  
