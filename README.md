@@ -56,7 +56,8 @@ Faça seus personagens evoluírem com o comando de level up, opcionalmente espec
 ## Exemplos de Programas
 
 ### Criando uma ficha
-### //Altere a ficha pela classe Main.java  
+#### Crie um arquivo .txt como abaixo e envie como parâmetro na hora de executar o Main 
+
 ```
 CRIAR_FICHA Lou
     IDADE 201
@@ -149,8 +150,10 @@ javac -cp "lib/antlr-runtime-4.13.2.jar:lib/gson-2.6.2.jar" -d bin src/antlr/*.j
 ```
 ## 3. Executar arquivo Main
 Executar programa principal: 
+*É necessário passar o arquivo .txt contendo os comandos como parâmetro de execução, substitua o "fichaExemplo.txt" pelo seu arquivo criado*
+
 ``` 
-java -cp "bin:lib/antlr-runtime-4.13.2.jar:lib/gson-2.6.2.jar" antlr.Main
+java -cp "bin:lib/antlr-runtime-4.13.2.jar:lib/gson-2.6.2.jar" antlr.Main fichaExemplo.txt
 ```
 
 ## Usando tasks do VSCode
@@ -173,7 +176,8 @@ Compilar arquivos java
     javac -cp "lib\antlr-runtime-4.13.2.jar;lib\gson-2.6.2.jar" -d bin src\antlr\*.java  
 
 executar Main  
- 
+*É necessário passar o arquivo .txt contendo os comandos como parâmetro de execução, substitua o "fichaExemplo.txt" pelo seu arquivo criado*
+
     java -cp "bin;lib\antlr-runtime-4.13.2.jar;lib\gson-2.6.2.jar" antlr.Main  
 
 # Resultado

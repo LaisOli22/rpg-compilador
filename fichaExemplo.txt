@@ -1,0 +1,33 @@
+CRIAR_FICHA Lou
+    IDADE 201
+    CLASSE MAGO
+    RACA HUMANO
+    NIVEL 10
+    VIDA 85
+    
+    ATRIBUTOS
+        FORCA 12
+        DESTREZA 14
+        INTELIGENCIA 20
+        CARISMA 18
+    FIM_ATRIBUTOS
+    
+    INVENTARIO
+        1 - cajado
+        5 - pocao
+    FIM_INVENTARIO
+FIM_FICHA
+
+LVL_UP Lou
+
+EDITAR_FICHA Lou
+    VIDA 90
+    INVENTARIO
+        1 - Cajado  
+        5 - Pergaminhos 
+        3 - pocao
+        1 - anel_poder
+    FIM_INVENTARIO
+FIM_EDICAO
+
+

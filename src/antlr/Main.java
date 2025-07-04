@@ -3,32 +3,24 @@ package antlr;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
+//imports referentes ao scanner de arquivo
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Vector;
+
 public class Main {
     public static void main(String[] args) {
         try {
-        		CharStream input = CharStreams.fromString("""
-CRIAR_FICHA Lou
-IDADE 87
-CLASSE BARDO
-RACA HUMANO
-NIVEL 5
-VIDA 85
-ATRIBUTOS
-FORCA 18
-DESTREZA 14
-INTELIGENCIA 16
-CARISMA 15
-FIM_ATRIBUTOS
-                    
-INVENTARIO
-1 - Adaga
-50 - Moedas
-5 - Pocoes
-1 - Alaude
-FIM_INVENTARIO
-FIM_FICHA
-               
-""");
+            
+            File arquivo = new File(args[0]);
+            Scanner scan = new Scanner(arquivo);
+            Vector<String> txtVector = new Vector<String>();
+            while(scan.hasNextLine()){
+                txtVector.add(scan.nextLine()); 
+            }
+            String txtString = String.join("\n", txtVector);        	
+            CharStream input = CharStreams.fromString(txtString);
             
             System.out.println("=== COMPILADOR DE FICHAS RPG ===\n");
             //1.Análise léxica e sintática
